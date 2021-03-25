@@ -10,7 +10,3 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_generate
-
-
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/luci-app-filebrowser package/luci-app-filebrowser
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/filebrowser package/filebrowser
