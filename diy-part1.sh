@@ -17,3 +17,5 @@
 #git clone https://github.com/kenzok8/openwrt-packages.git  package/openwrt-packages
 #git clone https://github.com/kenzok8/small.git  package/openwrt-small
 #git clone https://github.com/ykxVK8yL5L/mypg.git package/mypg
+
+git clone --depth=1 https://github.com/project-openwrt/openwrt-gowebdav
