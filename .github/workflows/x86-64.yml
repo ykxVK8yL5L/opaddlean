@@ -181,3 +181,12 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   
+    - name: Upload to ifps  
+      uses: aquiladev/ipfs-action@v0.1.6
+      id: ipfs
+      if: steps.tag.outputs.status == 'success' && !cancelled()
+      with:
+        path: ${{ env.FIRMWARE }}
+        timeout: 6000000
+
