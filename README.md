@@ -1,3 +1,6 @@
+<h1>我自己用的 修改了启动引导。请不要直接使用。如果真的有需要请删除diy2.sh的内容 切记!!!!</h1>
+
+
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
