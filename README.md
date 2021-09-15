@@ -1,4 +1,4 @@
-# 我自己用的 修改了启动引导。请不要直接使用。如果真的有需要请删除diy2.sh的内容 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `切记!!!!` 
+# 我自己用的 修改了启动引导。请不要直接使用。如果真的有需要请删除diy-part2.sh的内容 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `切记!!!!` 
 
 
 # Actions-OpenWrt
