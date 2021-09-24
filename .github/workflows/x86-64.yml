@@ -187,6 +187,6 @@ jobs:
       id: ipfs
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        path: ${{ env.FIRMWARE }}
+        path: openwrt/bin
         timeout: 6000000
 
