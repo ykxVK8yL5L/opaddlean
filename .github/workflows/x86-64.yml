@@ -33,6 +33,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
+  UPLOAD_IPFS: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
@@ -185,7 +186,7 @@ jobs:
     - name: Upload to ifps  
       uses: aquiladev/ipfs-action@v0.1.6
       id: ipfs
-      if: steps.organize.outputs.status == 'success' && !cancelled()
+      if: steps.organize.outputs.status == 'success' && !cancelled() && env.UPLOAD_IPFS == 'true' 
       with:
         path:  ${{ env.FIRMWARE }}
         timeout: 6000000
