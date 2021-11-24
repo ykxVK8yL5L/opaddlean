@@ -12,3 +12,8 @@
 sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_generate
 sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 sed -i 's/hd0,gpt1/hd1,gpt1/g' target/linux/x86/image/grub-efi.cfg
+
+
+# 一些包冲突
+rm -rf feeds/kenzo/filebrowser
+rm -rf feeds/kenzo/luci-app-filebrowser
