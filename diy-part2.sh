@@ -16,4 +16,4 @@ sed -i 's/hd0,gpt1/hd1,gpt1/g' target/linux/x86/image/grub-efi.cfg
 
 # 一些包冲突
 rm -rf feeds/kenzo/filebrowser
-rm -rf feeds/kenzo/luci-app-filebrowser
+rm -rf feeds/mypg/luci-app-filebrowser
