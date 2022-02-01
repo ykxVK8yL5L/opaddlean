@@ -23,10 +23,10 @@ jobs:
       id: lastday
       run:
         #lastday=$(if [[ $(date -d "+1 day" +%m) != $(date +%m) ]];then  echo "Today is the last day of the month"; else  echo "Today is NOT the last day of the month"; fi)
-        lastday=$(date +%m)
+        lastday=$(date +'%Y-%m-%d')
         echo "Hello there!"
         echo "$lastday"
-        echo "::set-output name=islastday::$lastday"
+        echo "::set-output name=islastday::$(date +'%Y-%m-%d')"
     - name: printresult
       run:
         echo "${{ steps.lastday.outputs.islastday }}"
