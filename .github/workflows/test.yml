@@ -1,0 +1,32 @@
+name: 测试最后一天执行
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+#  schedule:
+#    - cron: 0 8 * * 5
+
+env:
+
+jobs:
+  build:
+    runs-on: Ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+      
+    - name: lastdate
+      if: ($(date -d "+1 day" +%m) != $(date +%m))
+      run:
+        echo "not last day";
+    - name: lastdate
+      if: ($(date -d "+1 day" +%m) == $(date +%m))
+      run:
+        echo "last day of month";
+
