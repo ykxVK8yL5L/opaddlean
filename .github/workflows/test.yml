@@ -22,7 +22,7 @@ jobs:
     - name: lastdat
       id: lastday
       run:
-        lastday=$($(date -d "+1 day" +%m) != $(date +%m))
+        lastday=$(if [[ $(date -d "+1 day" +%m) != $(date +%m) ]]then  echo "Today is the last day of the month" else  echo "Today is NOT the last day of the month" fi)
         echo "::set-output name=islastday::$lastday"
     - name: printresult
       run:
