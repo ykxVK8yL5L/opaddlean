@@ -26,5 +26,5 @@ jobs:
         echo "::set-output name=islastday::$lastday"
     - name: printresult
       run:
-        echo ${{ $steps.lastday.outputs.islastday }}
+        echo "${{ $steps.lastday.outputs.islastday }}"
 
