@@ -19,12 +19,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       
-    - name: lastdate
-      if: ($(date -d "+1 day" +%m) != $(date +%m))
+    - name: lastdat
+      id: lastday
       run:
-        echo "not last day";
-    - name: lastdate
-      if: ($(date -d "+1 day" +%m) == $(date +%m))
-      run:
-        echo "last day of month";
+        lastday=$(date -d "+1 day" +%m) != $(date +%m)
+        echo "::set-output name=islastday::$lastday"
+    - name: printresult
+        echo $steps.lastday.outputs.islastday
 
