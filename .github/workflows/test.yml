@@ -11,8 +11,6 @@ on:
 #  schedule:
 #    - cron: 0 8 * * 5
 
-env:
-
 jobs:
   build:
     runs-on: Ubuntu-20.04
