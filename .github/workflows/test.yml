@@ -19,12 +19,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       
-    - name: lastdat
+    - name: lastday
       id: lastday
       run:
         lastday=$(if [[ $(date -d "+1 day" +%m) != $(date +%m) ]];then  echo "Today is the last day of the month"; else  echo "Today is NOT the last day of the month"; fi)
         echo "::set-output name=islastday::$lastday"
     - name: printresult
       run:
-        echo "${{ steps.lastday.outputs.islastday }}"
+        echo ${{ steps.lastday.outputs.islastday }}
 
