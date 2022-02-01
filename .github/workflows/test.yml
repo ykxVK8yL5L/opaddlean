@@ -25,5 +25,6 @@ jobs:
         lastday=$(date -d "+1 day" +%m) != $(date +%m)
         echo "::set-output name=islastday::$lastday"
     - name: printresult
+      run:
         echo $steps.lastday.outputs.islastday
 
