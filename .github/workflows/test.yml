@@ -22,7 +22,7 @@ jobs:
     - name: lastdat
       id: lastday
       run:
-        lastday=$(date -d "+1 day" +%m) != $(date +%m)
+        lastday=$($(date -d "+1 day" +%m) != $(date +%m))
         echo "::set-output name=islastday::$lastday"
     - name: printresult
       run:
