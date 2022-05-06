@@ -21,8 +21,8 @@
 #git clone --depth=1 https://github.com/project-openwrt/openwrt-gowebdav
 
 #Pikpak
-svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
+svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-app-pikpak-webdav
 
 #Alist
-svn co https://github.com/sbwml/openwrt-alist/trunk ./luci-app-alist
-mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
+svn co https://github.com/sbwml/openwrt-alist/trunk package/luci-app-alist
+mv package/luci-app-alist/luci-app-alist/po/zh_Hans package/luci-app-alist/luci-app-alist/po/zh-cn
