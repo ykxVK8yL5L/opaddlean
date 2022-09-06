@@ -11,6 +11,6 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
 src-git helloworld https://github.com/fw876/helloworld
 src-git kenzo https://github.com/kenzok8/openwrt-packages
 src-git small https://github.com/kenzok8/small
-src-git mypg https://github.com/ykxVK8yL5L/mypg
+#src-git mypg https://github.com/ykxVK8yL5L/mypg
 src-git vzant https://github.com/ykxVK8yL5L/luci-theme-vzant
 #src-git kenzok8 https://github.com/kenzok8/openwrt-packages-1
