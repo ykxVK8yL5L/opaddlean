@@ -15,5 +15,5 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 
 
 # 一些包冲突
-rm -rf feeds/kenzo/filebrowser
-rm -rf feeds/kenzo/luci-app-filebrowser
+#rm -rf feeds/kenzo/filebrowser
+#rm -rf feeds/kenzo/luci-app-filebrowser
