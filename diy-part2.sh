@@ -18,3 +18,5 @@ sed -i "s|root::0:0:99999:7:::|root:$1$8pz6InR5$akb/zWDtsSfL2ZUpm0ep70:19241:0:9
 # 一些包冲突
 #rm -rf feeds/kenzo/filebrowser
 #rm -rf feeds/kenzo/luci-app-filebrowser
+# 开启缓存
+echo -e 'CONFIG_DEVEL=y\nCONFIG_CCACHE=y' >> .config;
