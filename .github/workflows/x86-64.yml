@@ -44,6 +44,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
+      with:
+          fetch-depth: 0
 
     - name: Initialization environment
       env:
@@ -63,6 +65,10 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+    - name: cache
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
