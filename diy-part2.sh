@@ -20,8 +20,10 @@ sed -i "s|root::0:0:99999:7:::|root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:
 sed -i '34d;37d' package/lean/default-settings/files/zzz-default-settings
 
 # 添加openwrt.cc软件源
-sed -i '2a echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' package/lean/default-settings/files/zzz-default-settings
-
+sed -i '$i echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' package/lean/default-settings/files/zzz-default-settings
+# samba设置,启用root账号默认密码为root
+sed -i '$i sed -i "s/invalid users/#invalid users/g" /etc/samba/smb.conf' package/lean/default-settings/files/zzz-default-settings
+sed -i '$i echo "root:0:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:329153F560EB329C0E1DEEA55E88A1E9:[U          ]:LCT-00000001:">/etc/smaba/smbpasswd' package/lean/default-settings/files/zzz-default-settings
 
 # 一些包冲突
 #rm -rf feeds/kenzo/filebrowser
