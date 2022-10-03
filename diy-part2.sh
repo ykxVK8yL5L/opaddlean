@@ -20,7 +20,7 @@ sed -i "s|root::0:0:99999:7:::|root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:
 sed -i '34d;37d' package/lean/default-settings/files/zzz-default-settings
 
 # 添加openwrt.cc软件源
-sed -i '2a echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' test.txt
+sed -i '2a echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' package/lean/default-settings/files/zzz-default-settings
 
 
 # 一些包冲突
