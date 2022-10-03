@@ -17,7 +17,7 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 #sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
 
 # 删除一些不需要的lean配置
-sed -i '34d;37d' package/lean/default-settings/files/zzz-default-settings
+#sed -i '34d;37d' package/lean/default-settings/files/zzz-default-settings
 
 # 添加openwrt.cc软件源
 sed -i '$i echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' package/lean/default-settings/files/zzz-default-settings
