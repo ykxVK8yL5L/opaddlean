@@ -13,7 +13,7 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 #sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 #sed -i 's/hd0,gpt1/hd1,gpt1/g' target/linux/x86/image/grub-efi.cfg
 # 修改默认密码为root【需要删除lean的配置文件里的设置或直接修改配置文件】
-sed -i "s|root::0:0:99999:7:::|root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:99999:7:::|g" package/base-files/files/etc/shadow
+#sed -i "s|root::0:0:99999:7:::|root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:99999:7:::|g" package/base-files/files/etc/shadow
 #sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$8pz6InR5$akb\/zWDtsSfL2ZUpm0ep70:19241:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
 
 # 删除一些不需要的lean配置
