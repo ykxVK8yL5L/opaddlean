@@ -35,7 +35,11 @@ sed -i 's/root::0:0:99999:7:::/root:$1$rq6132gg$G0rIIMm.BvYx9Fm8b4ES4\/:0:0:9999
 
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
 sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.9/g; }'  /etc/opkg/distfeeds.conf
-echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf
+echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base
+src/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci
+src/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages
+src/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing
+src/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf
 sed -i "s/option check_signature/# option check_signature/g" /etc/opkg.conf
 
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
