@@ -11,9 +11,15 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_generate
 
-rm -f ./package/lean/default-settings/files/zzz-default-settings
-cp ../zzz-default-settings ./package/lean/default-settings/files/zzz-default-settings
 
+######## samba修改
+sed -i 's/invalid users = root/#invalid users = root/g' packages/net/samba4/files/smb.conf.template
+
+
+######## 安装后的默认配置
+rm -f ./package/lean/default-settings/files/zzz-default-settings
+cp ../zzz-default-settings ./package/lean/default-settings/files/
+chmod +x ./package/lean/default-settings/files/zzz-default-settings
 
 ###################暂不需要的修改已在zzz-defaults-settings修改#####################
 #sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
