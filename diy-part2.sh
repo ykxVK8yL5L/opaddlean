@@ -13,7 +13,7 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 
 
 ######## samba修改
-sed -i 's/invalid users = root/#invalid users = root/g' package/net/samba4/files/smb.conf.template
+#sed -i 's/invalid users = root/#invalid users = root/g' package/net/samba4/files/smb.conf.template
 
 
 ###################暂不需要的修改已在zzz-defaults-settings修改#####################
