@@ -57,6 +57,14 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
 echo 'hsts=0' > /root/.wgetrc
 
+
+####### rclone相关######
+chmod 777 -R /dev/fuse
+echo "user_allow_other">>/etc/fuse.conf
+#####的clone结束#####
+
+
+
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
