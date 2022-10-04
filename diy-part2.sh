@@ -14,6 +14,8 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 # 添加openwrt.cc软件源
 sed -i '33d' package/lean/default-settings/files/zzz-default-settings
 sed -i '$i echo "src/gz openwrt_cc_base https://openwrt.cc/snapshots/packages/x86_64/base\nsrc/gz openwrt_cc_luci https://openwrt.cc/snapshots/packages/x86_64/luci\nsrc/gz openwrt_cc_packages https://openwrt.cc/snapshots/packages/x86_64/packages\nsrc/gz openwrt_cc_routing https://openwrt.cc/snapshots/packages/x86_64/routing\nsrc/gz openwrt_cc_telephony https://openwrt.cc/snapshots/packages/x86_64/telephony">>/etc/opkg/customfeeds.conf' package/lean/default-settings/files/zzz-default-settings
+# 注释 check_signature
+sed -i '$i sed -i "s/option check_signature/# option check_signature/g" /etc/opkg.conf' package/lean/default-settings/files/zzz-default-settings
 
 
 ###################失败的修改#####################
