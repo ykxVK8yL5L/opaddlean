@@ -76,10 +76,10 @@ config mount
 
 
 ####### rclone相关######
-chmod 777 -R /dev/fuse
+chmod -R 777 /dev/fuse
 echo "user_allow_other">>/etc/fuse.conf
 #####clone结束#####
-
+sed -i '4 a chmod -R 777 /dev/fuse' /etc/rc.local
 
 
 rm -rf /tmp/luci-modulecache/
