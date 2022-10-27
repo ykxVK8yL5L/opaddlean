@@ -79,6 +79,7 @@ config mount
 chmod -R 777 /dev/fuse
 echo "user_allow_other">>/etc/fuse.conf
 sed -i '4 a chmod -R 777 /dev/fuse' /etc/rc.local
+mkdir /mnt/onedrive && chmod -R 777 /mnt/onedrive
 #####rclone结束#####
 
 rm -rf /tmp/luci-modulecache/
