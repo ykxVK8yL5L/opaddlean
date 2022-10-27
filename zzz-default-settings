@@ -82,6 +82,13 @@ sed -i '4 a chmod -R 777 /dev/fuse' /etc/rc.local
 mkdir /mnt/onedrive && chmod -R 777 /mnt/onedrive
 #####rclone结束#####
 
+########## docker 外网访问##########
+sed -i "s#option wan_mode '0'#option wan_mode '1'#g" /etc/config/dockerd
+########## docker 外网访问结束##########
+
+
+
+
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
