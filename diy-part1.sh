@@ -24,7 +24,7 @@
 svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-app-pikpak-webdav
 #Axum-web
 svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
-
+svn co https://github.com/ykxVK8yL5L/luci-app-taskschedule/trunk/luci-app-taskschedule package/luci-app-taskschedule
 
 
 #Alist
