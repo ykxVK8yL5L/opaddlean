@@ -45,6 +45,7 @@ jobs:
     - name: Maximize build space
       uses: easimon/maximize-build-space@master
       with:
+        root-reserve-mb: 40960
         remove-dotnet: 'true'
         remove-android: 'true'
         
@@ -53,7 +54,7 @@ jobs:
     #  with:
     #      fetch-depth: 0
 
-    - name: Build
+    - name: 检查空间使用情况
       run: |
         echo "Free space:"
         df -h
