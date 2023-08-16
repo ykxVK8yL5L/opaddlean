@@ -42,16 +42,18 @@ jobs:
     runs-on: Ubuntu-20.04
 
     steps:
-    - name: Maximize build space
-      uses: easimon/maximize-build-space@master
-      with:
-        remove-dotnet: 'true'
-        remove-android: 'true'
-        
     - name: Checkout
       uses: actions/checkout@main
     #  with:
     #      fetch-depth: 0
+
+    - name: Free disk space (remove dotnet, android and haskell)
+      shell: bash
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /usr/local/lib/android
+        sudo rm -rf /opt/ghc
+
 
     - name: 检查空间使用情况
       run: |
