@@ -47,14 +47,14 @@ jobs:
     #  with:
     #      fetch-depth: 0
 
-    - name: Free disk space (remove dotnet, android and haskell)
+    - name: 增加可用空间 (删除dotnet, android、haskell、CodeQL、Cached Docker Images)
       shell: bash
       run: |
         sudo rm -rf /usr/share/dotnet
         sudo rm -rf /usr/local/lib/android
         sudo rm -rf /opt/ghc
-        # sudo rm -rf /opt/hostedtoolcache/CodeQL
-        # sudo docker image prune --all --force
+        sudo rm -rf /opt/hostedtoolcache/CodeQL
+        sudo docker image prune --all --force
 
 
     - name: 检查空间使用情况
