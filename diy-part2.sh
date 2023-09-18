@@ -31,11 +31,6 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 #sed -i '$i sed -i "s/option check_signature/# option check_signature/g" /etc/opkg.conf' package/lean/default-settings/files/zzz-default-settings
 ###################暂不需要的修改结束#####################
 
-#升级rust版本
-curl -o ./feeds/packages/lang/rust/rust-values.mk https://raw.githubusercontent.com/Jason6111/packages/patch-1/lang/rust/rust-values.mk
-curl -o ./feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/Jason6111/OpenWrt_Personal/main/other/rust/Makefile
-curl -o ./feeds/packages/lang/rust/patches/0001-Update-xz2-and-use-it-static.patch https://raw.githubusercontent.com/Jason6111/OpenWrt_Personal/main/other/rust/0001-Update-xz2-and-use-it-static.patch
-
 
 # 一些包冲突
 #rm -rf feeds/kenzo/filebrowser
