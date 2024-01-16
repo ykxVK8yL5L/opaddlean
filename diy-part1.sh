@@ -25,6 +25,9 @@ svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-ap
 #Axum-web
 svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
 svn co https://github.com/ykxVK8yL5L/luci-app-taskschedule/trunk/luci-app-taskschedule package/luci-app-taskschedule
+svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/gmediarender package/gmediarender
+svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/luci-app-gmediarender package/luci-app-gmediarender
+
 
 
 #Alist
