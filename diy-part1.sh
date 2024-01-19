@@ -21,15 +21,20 @@
 #git clone --depth=1 https://github.com/project-openwrt/openwrt-gowebdav
 
 #Pikpak
-svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-app-pikpak-webdav
+#svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-app-pikpak-webdav
 #Axum-web
-svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
+#svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
 #luci-app-taskschedule
-svn co https://github.com/ykxVK8yL5L/luci-app-taskschedule/trunk/luci-app-taskschedule package/luci-app-taskschedule
+#svn co https://github.com/ykxVK8yL5L/luci-app-taskschedule/trunk/luci-app-taskschedule package/luci-app-taskschedule
+git clone --depth=1 https://github.com/ykxVK8yL5L/luci-app-taskschedule.git taskschedule-packages
+cp -rf taskschedule-packages/luci-app-taskschedule package/luci-app-taskschedule
 #luci-app-gmediarender
-svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/gmediarender package/gmediarender
-svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/luci-app-gmediarender package/luci-app-gmediarender
+#svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/gmediarender package/gmediarender
+#svn co https://github.com/syb999/openwrt-22.03.5/trunk/package/multimedia/luci-app-gmediarender package/luci-app-gmediarender
 
 #Alist
-svn co https://github.com/sbwml/openwrt-alist/trunk package/luci-app-alist
-mv package/luci-app-alist/luci-app-alist/po/zh_Hans package/luci-app-alist/luci-app-alist/po/zh-cn
+#svn co https://github.com/sbwml/openwrt-alist/trunk package/luci-app-alist
+git clone --depth=1 https://github.com/sbwml/luci-app-alist.git sbwml-packages
+cp -rf sbwml-packages/alist package/alist
+cp -rf sbwml-packages/luci-app-alist package/luci-app-alist
+mv package/luci-app-alist/po/zh_Hans package/luci-app-alist/po/zh-cn
