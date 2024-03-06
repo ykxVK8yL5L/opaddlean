@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.1.168/g' package/base-files/files/bin/config_gener
 ######## samba修改
 sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba4/files/smb.conf.template
 
-sed -i 's/iperf3-ssl[[:space:]]*//g' openwrt/target/linux/x86/Makefile
+# sed -i 's/iperf3-ssl[[:space:]]*//g' openwrt/target/linux/x86/Makefile
 
 ###################暂不需要的修改已在zzz-defaults-settings修改#####################
 #sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
